@@ -1,0 +1,28 @@
+{
+  "name": "observable-demo",
+  "version": "1.0.0-0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "lint": "eslint src"
+  },
+  "keywords": [],
+  "author": "Jeremy Lund <jeremy.r.lund@gmail.com> (https://github.com/lund0n)",
+  "license": "MIT",
+  "devDependencies": {
+    "buble": "0.13.2",
+    "eslint": "3.5.0",
+    "eslint-config-airbnb-base": "7.1.0",
+    "eslint-plugin-import": "1.14.0",
+    "rimraf": "2.5.4",
+    "rollup": "0.35.9",
+    "rollup-plugin-buble": "0.13.0",
+    "rollup-plugin-commonjs": "4.1.0",
+    "rollup-plugin-eslint": "3.0.0",
+    "rollup-plugin-filesize": "0.5.5",
+    "rollup-plugin-node-resolve": "2.0.0",
+    "rollup-plugin-uglify": "1.0.1"
+  }
+}
