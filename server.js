@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
+const livereload = require('livereload');
 const path = require('path');
 const rollup = require('rollup-endpoint');
 const serveStatic = require('serve-static');
@@ -27,5 +28,7 @@ app.use('*.js', (req, res) => {
 app.use(serveStatic(path.resolve('src')));
 
 app.listen(8000, () => {
+  const lrServer = livereload.createServer();
   console.log('Server started on port 8000.');
+  lrServer.watch(path.resolve('src'));
 });
