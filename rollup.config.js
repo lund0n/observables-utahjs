@@ -7,7 +7,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  entry: 'src/index.js',
+  entry: 'src/basic/index.js',
   dest: 'dist/index.js',
   format: 'iife',
   sourceMap: 'inline',
@@ -18,7 +18,9 @@ export default {
       main: true,
       browser: true,
     }),
-    commonjs(),
+    commonjs({
+      ignoreGlobal: true,
+    }),
     eslint(),
     buble(),
     (process.env.NODE_ENV === 'production' && uglify()),

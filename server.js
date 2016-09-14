@@ -19,7 +19,9 @@ app.use('*.js', (req, res) => {
         main: true,
         browser: true,
       }),
-      commonjs(),
+      commonjs({
+        ignoreGlobal: true,
+      }),
       buble(),
     ],
   });
