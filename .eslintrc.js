@@ -11,4 +11,7 @@ module.exports = {
       experimentalObjectRestSpread: true,
     },
   },
+  rules: {
+    'arrow-parens': ['error', 'as-needed'],
+  },
 };
