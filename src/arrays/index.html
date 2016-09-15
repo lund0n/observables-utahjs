@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrays vs. Observables</title>
+</head>
+<style>
+  html, body {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .comparison {
+    display: flex;
+  }
+  .comparison--column {
+    width: 300px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .comparison--arrays,
+  .comparison--observables {
+    border: solid 4px black;
+    margin: 5px;
+    min-height: 300px;
+  }
+</style>
+<body>
+  <div class="comparison">
+    <div class="comparison--column">
+      <h1>Array</h1>
+      <div class="comparison--arrays"></div>
+    </div>
+    <div class="comparison--column">
+      <h1>Observable</h1>
+      <div class="comparison--observables"></div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

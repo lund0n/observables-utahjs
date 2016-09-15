@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Basic Demo</title>
+  <title>Drag and Drop Demo</title>
   <style>
     html, body {
       font-size: 30px;
@@ -12,10 +12,21 @@
     h1 {
       font-size: 36px;
     }
+    .draggable {
+      position:absolute;
+      border: solid 2px black;
+      background: #ccc;
+      width: 200px;
+      height: 200px;
+      cursor: move;
+    }
   </style>
 </head>
 <body>
-  <h1>Basic Demo</h1>
+  <h1>Drag and Drop Demo</h1>
+  <div class="draggable">
+    Drag me around
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
