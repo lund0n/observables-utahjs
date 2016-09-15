@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs-es';
+import { Observable } from '@reactivex/rxjs';
 
 const draggable = document.querySelector('.draggable');
 const mouseDown$ = Observable.fromEvent(draggable, 'mousedown');

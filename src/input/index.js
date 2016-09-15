@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs-es';
+import { Observable } from '@reactivex/rxjs';
 
 const inputElement = document.querySelector('.input');
 const outputElement = document.querySelector('.output');

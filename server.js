@@ -10,9 +10,18 @@ const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 
 const app = express();
+app.use('/rxjs', serveStatic(path.resolve('node_modules', '@reactivex', 'rxjs', 'dist', 'global')));
 app.use('*.js', (req, res) => {
   const middleware = rollup.serve({
     entry: path.join(__dirname, 'src', req.baseUrl),
+    external: [
+      '@reactivex/rxjs',
+    ],
+    generateOptions: {
+      globals: {
+        '@reactivex/rxjs': 'window.Rx',
+      },
+    },
     plugins: [
       resolve({
         jsnext: true,

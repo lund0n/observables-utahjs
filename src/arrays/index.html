@@ -5,29 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Arrays vs. Observables</title>
+  <script src="/rxjs/Rx.min.js"></script>
+  <style>
+    html, body {
+      font-size: 30px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    .comparison {
+      display: flex;
+    }
+    .comparison--column {
+      width: 300px;
+      flex-grow: 1;
+      text-align: center;
+    }
+    .comparison--arrays,
+    .comparison--observables {
+      border: solid 4px black;
+      margin: 5px;
+      min-height: 300px;
+    }
+  </style>
 </head>
-<style>
-  html, body {
-    font-size: 30px;
-  }
-  h1 {
-    font-size: 36px;
-  }
-  .comparison {
-    display: flex;
-  }
-  .comparison--column {
-    width: 300px;
-    flex-grow: 1;
-    text-align: center;
-  }
-  .comparison--arrays,
-  .comparison--observables {
-    border: solid 4px black;
-    margin: 5px;
-    min-height: 300px;
-  }
-</style>
 <body>
   <div class="comparison">
     <div class="comparison--column">

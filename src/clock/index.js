@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs-es';
+import { Observable } from '@reactivex/rxjs';
 
 const clockElement = document.createElement('h1');
 document.body.appendChild(clockElement);

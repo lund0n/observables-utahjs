@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs-es';
+import { Observable } from '@reactivex/rxjs';
 import { qs } from '../utils';
 
 const btnIncrement = qs('.counter--increment');

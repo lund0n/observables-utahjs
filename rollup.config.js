@@ -11,6 +11,12 @@ export default {
   dest: 'dist/index.js',
   format: 'iife',
   sourceMap: 'inline',
+  external: [
+    '@reactivex/rxjs',
+  ],
+  globals: {
+    '@reactivex/rxjs': 'window.Rx',
+  },
   plugins: [
     filesize(),
     resolve({

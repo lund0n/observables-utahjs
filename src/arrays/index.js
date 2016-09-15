@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs-es';
+import { Observable } from '@reactivex/rxjs';
 import { appendTo, qs } from '../utils';
 
 const addToArrayColumn = appendTo(qs('.comparison--arrays'));
