@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="/rxjs/Rx.min.js"></script>
+  <style>
+		.person {
+			border: solid 2px gray;
+			padding: 4px;
+			margin: 4px;
+			width: 140px;
+			height: 170px;
+			float: left;
+		}
+		.person__name {
+			display:block;
+			font-weight: bold;
+		}
+		.person__image {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Search Demo</h1>
+	<label>Search: <input type="text" class="search"></label><br>
+	<h2>Results</h2>
+	<div class="results"></div>
+	<script src="index.js"></script>
+</body>
+</html>

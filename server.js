@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const express = require('express');
+const jsonServer = require('json-server');
 const livereload = require('livereload');
 const path = require('path');
 const rollup = require('rollup-endpoint');
@@ -9,7 +9,9 @@ const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 
-const app = express();
+const app = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 app.use('/rxjs', serveStatic(path.resolve('node_modules', '@reactivex', 'rxjs', 'dist', 'global')));
 app.use('*.js', (req, res) => {
   const middleware = rollup.serve({
@@ -37,6 +39,8 @@ app.use('*.js', (req, res) => {
   middleware(req, res);
 });
 app.use(serveStatic(path.resolve('src')));
+app.use(router);
+app.use(middlewares);
 
 app.listen(8000, () => {
   const lrServer = livereload.createServer();

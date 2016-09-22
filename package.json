@@ -19,7 +19,7 @@
     "eslint": "3.5.0",
     "eslint-config-airbnb-base": "7.1.0",
     "eslint-plugin-import": "1.14.0",
-    "express": "4.14.0",
+    "json-server": "0.8.21",
     "livereload": "0.5.0",
     "npm-run-all": "3.1.0",
     "rimraf": "2.5.4",
