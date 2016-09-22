@@ -6,6 +6,9 @@ const resultList = document.querySelector('.results');
 const clearResults = clearNodes(resultList);
 const search$ = Observable.fromEvent(searchField, 'keyup')
   .map(e => e.target.value)
+  // .startWith('') // add an initial value to the stream.
+  // .distinctUntilChanged() // don't send consecutive, same values down the stream.
+  // .debounceTime(300) // debounce requests so that every keyup doesn't trigger a request.
   .switchMap(query =>
     Observable.fromPromise(
       fetch(`http://localhost:8000/people?name_like=${query}`)
